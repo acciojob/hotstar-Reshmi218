@@ -13,20 +13,14 @@ import javax.persistence.Table;
 @Entity
 @Table
 public class WebSeries {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-
     @Column(unique = true)
     private String seriesName;
-
     private int ageLimit;
-
     private double rating;
-
     private SubscriptionType subscriptionType; //This denotes with which of subscriptionType this webseries comes ie. BASIC,PRO, ELITE
-
     @ManyToOne
     @JoinColumn
     private ProductionHouse productionHouse;
